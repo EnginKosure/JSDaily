@@ -1,0 +1,2 @@
+# JSDaily
+Daily small projects
