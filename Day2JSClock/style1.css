@@ -1,0 +1,28 @@
+#box1 {
+  color: blue;
+}
+
+#box2 {
+  color: rgb(0, 0, 255);
+  border-style: dashed;
+  border-color: salmon;
+  border-width: 5px;
+}
+
+#box3 {
+  color: #0000ff;
+  border: 5px dotted green;
+}
+
+#box4 {
+  color: hsl(240, 100%, 50%);
+  border: double 5px red;
+}
+
+#box5 {
+  color: rgba(0, 0, 255, 1);
+}
+
+#box6 {
+  color: hsla(240, 100%, 50%, 1);
+}
