@@ -4,6 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      label > input[type="radio"] {
+        display: none;
+      }
+      label > input[type="radio"] + *::before {
+        content: "";
+        display: inline-block;
+        vertical-align: bottom;
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.3rem;
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 0.1rem;
+        border-color: gray;
+      }
+
+      label > input[type="radio"]:checked + *::before {
+        background: radial-gradient(
+          black 0%,
+          black 40%,
+          transparent 50%,
+          transparent
+        );
+        border-color: black;
+      }
+      label > input[type="radio"]:checked + * {
+        color: black;
+      }
+    </style>
   </head>
   <body>
     <form action="result.html" name="myfirstform" method="">
@@ -14,6 +44,15 @@
       <input type="text" name="soyadı" id="surname" />
       <br /><br />
       <input type="submit" value="gönder" />
+
+      <label>
+        <input type="radio" name="key" value="value" checked />
+        <span>I am a radio button</span>
+      </label>
+      <label>
+        <input type="radio" name="key" value="another-value" />
+        <span>I am another radio button</span>
+      </label>
     </form>
   </body>
 </html>

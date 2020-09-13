@@ -1,0 +1,40 @@
+input[type="checkbox"],
+textarea,
+select {
+  margin-top: 10px;
+}
+
+.select-1 {
+  margin-bottom: 5px;
+}
+
+label > input[type="radio"] {
+  display: none;
+}
+label > input[type="radio"] + *::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 0.3rem;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 0.01rem;
+  border-color: black;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+label > input[type="radio"]:checked + *::before {
+  background: radial-gradient(
+    black 0%,
+    black 40%,
+    transparent 50%,
+    transparent
+  );
+  border-color: black;
+}
+label > input[type="radio"]:checked + * {
+  color: black;
+}
