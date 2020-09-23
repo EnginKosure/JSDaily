@@ -4,6 +4,7 @@ body {
   background-image: url("https://www.funbrain.com/assets/img/content-cards/F2qRmLhRnmebc8jJAUjr_GuessTheNumber%403x.png");
   background-size: cover;
   background-repeat: no-repeat;
+  /* background-attachment: fixed; */
 }
 h1 {
   text-align: center;
@@ -18,8 +19,10 @@ h1 {
 } */
 #rabbit {
   position: absolute;
-  right: 15%;
-  bottom: -28%;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 10%; /* tune this */
+  margin-right: 10%; /* tune this */
 }
 
 .box-canvas {
