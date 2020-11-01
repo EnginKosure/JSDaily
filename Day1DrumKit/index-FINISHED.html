@@ -59,7 +59,8 @@
 
 <script>
   function removeTransition(e) {
-    if (e.propertyName !== 'transform') return;
+    // console.log(e);
+    // if (e.propertyName !== 'transform') return;
     e.target.classList.remove('playing');
   }
 
@@ -73,7 +74,14 @@
     audio.play();
   }
 
-  const keys = Array.from(document.querySelectorAll('.key'));
+  const keys = Array.from(document.querySelectorAll('.key'));//array
+  const keys1 = document.querySelectorAll('.key');//NodeList
+  // [...keys1].forEach or Array.from(key1).forEach... can be used.
+  // Not all browsers support forEach on NodeLists, but classic for loop works
+  console.log('keys',keys);
+  console.log('keys1',keys1);
+
+
   keys.forEach(key => key.addEventListener('transitionend', removeTransition));
   window.addEventListener('keydown', playSound);
 </script>
